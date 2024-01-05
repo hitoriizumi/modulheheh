@@ -1,4 +1,4 @@
-import { Heading, Image, Text, FlatList, Form, Item, Input, Stack, Button, HStack, View, VStack } from "native-base";
+import { Heading, Image, Text, FlatList, Form, Item, Input, Stack, Button, HStack, View, VStack, Center } from "native-base";
 import { Box, ScrollView } from "native-base";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
@@ -32,9 +32,6 @@ const Home = () => {
                 <Heading fontSize={"26"} color={"black"}>Ayo Temukan Perusahaan</Heading>
                 <Heading fontSize={"26"} color={"black"}>Impianmu!</Heading>
               </VStack>
-            </Box>
-            <Box mb={"6"}>
-              <Input mx="auto" placeholder="mau cari apa?" borderRadius={"20"} w="100%" />
             </Box>
             <Image source={require("../assets/foto.jpg")} alt="photo" w={"350"} h={'250'} borderRadius={"20"}/>
             <HStack>
@@ -79,7 +76,7 @@ const Home = () => {
               </ScrollView>
             </Box>
               
-              <View mx={"10"} mb={"120"} >
+              <Center mx={"10"} mb={"8"}>
                 <Box px={"4"} bg={"#ffff"} w={"container"} h={'container'} mx={"auto"} py={"4"} borderRadius={"10"} boxShadow={"10"} shadow={"6"}>
                   <Heading color={"black"} pt={"1"} pb={"2"}> Visi</Heading>
                   <Text color={"black"} pb={"2"} textAlign={"justify"}>
@@ -92,7 +89,13 @@ const Home = () => {
                     Etiam dignissim tempor elit, nec feugiat ante suscipit eget. Sed imperdiet diam at ultrices viverra.
                   </Text>
                 </Box>
-              </View>
+              </Center>
+
+              <Center mb={"120"}>
+                <Button w={"30%"} bg={"#9A1314"} onPress={() => navigation.navigate("About")}>
+                  <Text color={"white"} bold={true}>About App</Text>
+                </Button>
+              </Center>
       </ScrollView>
     </>
   );

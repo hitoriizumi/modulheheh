@@ -13,6 +13,7 @@ import Login from "./screens/login";
 import Signup from "./screens/signup";
 import Choose from "./screens/choose";
 import Cover from "./screens/cover";
+import About from "./screens/about";
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Navigator Declaration
@@ -91,6 +92,7 @@ const App = () => {
           <Stack.Screen name="Login" component={Login} options={noHead} />
           <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
           <Stack.Screen name="Home" component={Home} options={noHead} />
+          <Stack.Screen name="About" component={About} options={noHead} />
           <Stack.Screen name="Detail" component={Detail} options={noHead} />
           <Stack.Screen name="Company" component={Company} options={noHead} />
           <Stack.Screen name="Form" component={Form} options={noHead} />

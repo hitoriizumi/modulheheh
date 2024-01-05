@@ -1,24 +1,23 @@
-import { Heading, Center, View, Image, Text, VStack } from "native-base";
+import { Heading, Center, View, Image, Text, VStack, Button } from "native-base";
 import { Header } from "../components";
 
 const Profile = () => {
   return (
     <>
       <View backgroundColor={"#9A1314"} w={"full"} h={"300"} borderBottomLeftRadius={"40"} borderBottomRightRadius={"40"}>
-        <Heading color={"white"} mx={"auto"} mt={"50"}>
-          Profile
-        </Heading>
-        <Image
-          source={require("../assets/logo.png")}
-          resizeMode="contain"
-          backgroundColor={"white"}
-          w="150"
-          h="150"
-          alt="Profil Logo"
-          mx={"auto"}
-          my={"auto"}
-          borderRadius={"full"}
-        />
+        <Center>
+          <Heading color={"white"} mt={"50"} mb={"10"}>
+            Profile
+          </Heading>
+          <Image
+            source={require("../assets/profile.png")}
+            resizeMode="contain"
+            w="150"
+            h="150"
+            alt="Profil Logo"
+            borderRadius={"full"}
+          />
+        </Center>
       </View>
       <View mx={8} mt={"5"}>
         <VStack mb={"5"} >
@@ -54,16 +53,19 @@ const Profile = () => {
           </Text>
         </VStack>
       </View>
-      <Image
+      <Center>
+        <Button bg={"#9A1314"} mb={"2"} w={"20%"} >
+          <Text color={"white"} bold={true}>Logout</Text>
+        </Button>
+        <Image
           source={require("../assets/telkom.png")}
           resizeMode="contain"
-          w="90"
-          h="90"
+          w="75"
+          h="75"
           alt="Profil Logo"
-          mx={"auto"}
-          mt={"8"}
           borderRadius={"full"}
         />
+      </Center>
     </>
   );
 };
